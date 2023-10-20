@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+*{
+    font-family: 'Bebas Neue', sans-serif;
+    
+}
+body{
+    background: url("images/Desktop\ -\ 1.png") no-repeat;
+    /* background-size: cover; */
+}
+h1{
+    font-size: 100px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.container{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.task-input{
+    width: 255px;
+    height: 45px;
+    padding-left: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    border: 1px solid #fff;
+}
+.plus-btn{
+    margin-left: 10px;
+    border-radius: 10px;
+    width: 80px;
+    border: none;
+    object-fit: scale-down;
+    height: 50px;
+    background-color: #443DC1;
+}
+
+.second-block{
+    display: flex;
+    align-content: flex-end;
+    justify-content: center;
+}
+
+.block{
+    display: flex;
+    margin-top: 50px;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 400px;
+    justify-content: space-evenly;
+}
+.main{
+    display: flex;
+    justify-content: center;
+}
+.task{
+    width: 240px;
+    height: 50px;
+    margin-top: 10px;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 10px;
+}
+
+h2{
+    display: block;
+    margin-left: 20px;
+    margin-top: 12px;
+}
+
+.change-btn{
+    margin-left: 10px;
+}
