@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 *{
+<<<<<<< HEAD
     font-family: 'Bebas Neue', sans-serif;
+=======
+    /* font-family: 'Bebas Neue', sans-serif; */
+>>>>>>> f2329e38bfac4fb74fabd439b91415070238c4e7
     
 }
 body{
@@ -22,7 +26,11 @@ h1{
 }
 
 .task-input{
+<<<<<<< HEAD
     width: 255px;
+=======
+    width: 290px;
+>>>>>>> f2329e38bfac4fb74fabd439b91415070238c4e7
     height: 45px;
     padding-left: 20px;
     border-radius: 10px;
@@ -32,7 +40,11 @@ h1{
 .plus-btn{
     margin-left: 10px;
     border-radius: 10px;
+<<<<<<< HEAD
     width: 80px;
+=======
+    width: 50px;
+>>>>>>> f2329e38bfac4fb74fabd439b91415070238c4e7
     border: none;
     object-fit: scale-down;
     height: 50px;
