@@ -1,27 +1,16 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render
 from .models import MessageModel
 from .forms import MessageForm
 
 
-# Create your views here.
-def index(request):
-    return render(request, "index.html")
+def todo_view(request):
+    if request.method == "POST":
+        form = MessageForm(request.POST)
+        if form.is_valid():
+            form.save()
+    else:
+        form = MessageForm
 
+    tasks = MessageModel.objects.all().order_by()
 
-def create_view(request):
-    context = {}
-
-    form = MessageForm(request.POST or None)
-    if form.is_valid():
-        form.save()
-
-    context["form"] = form
-    return render(request, "index.html", context)
-
-
-def list_view(request):
-    context = {}
-
-    context["dataset"] = MessageModel.objects.all()
-
-    return render(request, "index.html", context)
+    return render(request, "index.html", {"form": form, "tasks": tasks})

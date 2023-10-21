@@ -8,28 +8,22 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
-        <h1>todo list</h1>
-        <div class="second-block">
-            <form method="POST">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <input class="task-input" placeholder="Enter your task" type="text">
-                <input class="plus-btn" placeholder="Submit" type="submit">
-            </form>  
-            <!-- <input class="plus-btn" type="image" src="{% static 'images/Vector.png' %}" alt="">  -->
-        </div>
-        <div class="main">
-            <div class="block">
-                {% for data in dataset %}
-                <div class="task">
-                    <h2>{{ data.message }}</h1>
-                </div>
-                <button class="change-btn">Change</button>
-                <button>Delete</button>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
+    {% block content %}
+    <h1>To-Do List</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add Task</button>
+    </form>
+
+    <h2>Tasks</h2>
+    <ul>
+        {% for task in tasks %}
+            <li>{{ task.message }}</li>
+        {% empty %}
+            <li>No tasks yet.</li>
+        {% endfor %}
+    </ul>
+    {% endblock %}
 </body>
 </html>
