@@ -22,7 +22,8 @@ h1{
 }
 
 .task-input{
-    width: 258px;
+    width: 255px;
+    width: 290px;
     height: 45px;
     padding-left: 20px;
     border-radius: 10px;
@@ -32,8 +33,9 @@ h1{
 .plus-btn{
     margin-left: 10px;
     border-radius: 10px;
-    width: 50px;
+    width: 80px;
     border: none;
+    object-fit: scale-down;
     height: 50px;
     background-color: #443DC1;
 }
@@ -46,20 +48,46 @@ h1{
 
 .block{
     display: flex;
-    justify-content: center;
     margin-top: 50px;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 400px;
+    justify-content: space-evenly;
+}
+.main{
+    display: flex;
+    justify-content: center;
 }
 .task{
-    width: 211px;
+    width: 240px;
     height: 50px;
-    display: flex;
+    margin-top: 10px;
     border: 1px solid #fff;
     color: #fff;
     border-radius: 10px;
 }
 
 h2{
-    text-align: center;
-    margin: 0;
-    padding: 10px;
+    display: block;
+    margin-left: 20px;
+    margin-top: 12px;
+}
+
+.change-btn{
+    margin-left: 10px;
+}
+
+
+
+
+.main-block{
+    display: flex;
+    justify-content: center;
+}
+
+form{
+    display: flex;
+    align-items: center;
 }

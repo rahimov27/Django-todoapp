@@ -4,4 +4,5 @@ from . import views
 
 urlpatterns = [
     path("", views.todo_view),
+    path("<id>/delete", views.delete_view, name="delete_view"),
 ]
