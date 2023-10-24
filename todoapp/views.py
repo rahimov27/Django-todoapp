@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404, HttpResponseRedirect, redirect
 from .models import MessageModel
 from .forms import MessageForm
+from django.urls import reverse_lazy
+from django.views.generic.edit import DeleteView
 
 
 def todo_view(request):
@@ -10,20 +12,6 @@ def todo_view(request):
             form.save()
     else:
         form = MessageForm
-
     tasks = MessageModel.objects.all()
 
     return render(request, "index.html", {"form": form, "tasks": tasks})
-
-
-def delete_view(request, id):
-    context = {}
-
-    obj = get_object_or_404(MessageModel, id=id)
-
-    if request.method == "POST":
-        obj.delete()
-
-        return HttpResponseRedirect("/")
-
-    return render(request, "index.html", context)

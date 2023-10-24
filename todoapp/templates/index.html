@@ -17,19 +17,11 @@
             <button type="submit">Add Task</button>
         </form>
     </div>
-    <!-- <h2>Tasks</h2> -->
     <br>
     <div class="tasks">
         <ul>
             {% for task in tasks %}
                 <li>{{ task.message }}</li>
-                <form method="POST">
-                    <!-- Security token by Django -->
-                    {% csrf_token %}
-                    Are you want to delete this item ?
-                    <input type="submit" value="Yes" />
-                    <a href="/">Cancel </a>
-                </form>
             {% empty %}
                 <li>No tasks yet.</li>
             {% endfor %}
